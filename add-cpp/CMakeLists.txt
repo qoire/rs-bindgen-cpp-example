@@ -5,9 +5,9 @@ set(CMAKE_CXX_STANDARD 11)
 
 # build
 add_library(add_static STATIC src/add.cpp)
-# add_executable(main main.cpp)
+add_executable(main main.cpp)
 # Not actually used on rust side, just to confirm add is working
-# target_link_libraries(main add_static)
+target_link_libraries(main add_static)
 
 # install
 install(TARGETS add_static ARCHIVE DESTINATION ${CMAKE_BINARY_DIR}/lib)

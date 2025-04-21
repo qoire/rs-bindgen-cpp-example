@@ -7,6 +7,9 @@ fn main() {
     let dst = cmake::Config::new("add-cpp")
         .build();
 
+    // Not sure about defaults, but run cargo with -v to see the output path
+    // that dst.display() is showing (it'll be one of the -L flags), then check
+    // where the installed output is relative to that folder
     println!("cargo:rustc-link-search=native={}/build/lib", dst.display());
     println!("cargo:rustc-link-lib=static=add_static");
 
