@@ -2,6 +2,7 @@
 
 Check add-cpp for C++ side code, just implements two add functions. This setup:
 - Uses CMake for build in C++ side
+- Links stdlib using Cargo
 - Bindgen for Rust wrapper generation (needs Rust 1.82+)
 
 For C++ side, you can run a sample program, as usual:

@@ -6,4 +6,8 @@ fn main() {
     };
 
     println!("The result of adding 3 and 4 is: {}", result);
+
+    unsafe {
+        print_add(3, 4);
+    }
 }
